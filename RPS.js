@@ -1,4 +1,4 @@
-let playerScore=computerScore=Round=0;
+/*let playerScore=computerScore=Round=0;
 let computerColor=playerColor="";
 while (Round !=5){game()};
 function playerChoice(){

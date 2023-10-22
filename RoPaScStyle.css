@@ -1,3 +1,199 @@
+/*<--General Styling-->*/
+*{
+    margin:0;
+    padding: 0;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+
 body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #3a4042;
+}
+/*<--FirstLayout Styling-->*/
+#header {
+    display: flex;
+    width: 100%;
+    height:20% ;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+}
+
+#content{
+    display: flex;
+    justify-content: space-around;
+    color: aliceblue;
+    width: 100%;
+    height:70%;
+}
+
+#footer{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    color: bisque;
+    background-color:#212121 ;
+}
+/*<--Content Styling-->*/
+.playerContent{
+    width:35%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 2px 5px 20px;
+}
+
+.computerContent {
+    width:35%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 20px 5px 2px;
+}
+.resultsContent{
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin:30px 5px 30px 5px;
+}
+
+/*<--playerContent Styling-->*/
+.playerName,.computerName {
+    line-height: 45px;
+    text-align: center;
+    height: 10%;
+    width: 90%;
+    border-radius: 15px;
+    color: #8ecccc;
+    font-size: large;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.playerChoices {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:start;
+    height:90% ;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.playerChoices div {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 80px;
+    width: 80px;
+}
+
+.playerChoices>div>img {
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+    border: 2px solid lightsteelblue;
+}
+
+.activePlayerChoice {
+    animation: left-to-right 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+}
+
+@keyframes left-to-right {
+    50% {
+        transform: translateX(250%) scale(150%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+/*<-- ComputerContent Styling -->*/
+.computerChoices{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:end;
+    height:90% ;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.computerChoices div{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 80px;
+    width: 80px;
+    border-radius: 15px;
     
 }
+
+.computerChoices>div>img{
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+    border: 2px solid lightsteelblue;
+}
+
+.activeComputerChoice{
+    animation: left-to-right 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+}
+
+@keyframes right-to-left {
+    50% {
+        transform: translateX(-250%) scale(150%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/*<-- ResultsContent Styling -->*/
+#resultsHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    padding: 5px 15px 5px 15px;
+    text-align: center;
+}
+
+#roundNumber {
+    margin-top:10px;
+}
+
+#resultsContent2 {
+
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    height: 50%;
+}
+
+.playersScores {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+}
+
+#computerScore,#playerScore {
+    margin-top: 20px;
+}
+
+#resultsComments{
+    height: 30%;
+    display: flex;
+    align-items: center;
+    padding:30px 15px 30px 15px;
+}
+
+
+
+
