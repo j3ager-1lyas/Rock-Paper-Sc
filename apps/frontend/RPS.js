@@ -1,10 +1,23 @@
-/*let playerScore=computerScore=Round=0;
-let computerColor=playerColor="";
-while (Round !=5){game()};
-function playerChoice(){
-    let plaChoice=prompt("Choose btwn [Rock],[Paper] or [Scissor]! Respect the Maj or Min: ")
-    return plaChoice;
+let playerScore= computerScore=Round=0;
+let computerColor= playerColor="";
+let playerChoices= document.querySelectorAll('.playerChoices div');
+let computerChoices= document.querySelectorAll('.computerChoices div');
+let startBtn = document.querySelector('#Start');
+/*Listening for the Start of the Game */
+let playChoice='';
+
+startBtn.addEventListener('click',start)
+
+function start(){
+    /*Initialize Round each Time the game starts again */
+    Round=0;
+    while (Round !=5){};
 }
+
+function playerChoice(){
+      
+}
+
 function computerChoice(){
 /*Generate Random Number btwn 0-2 */
     let compChoice=Math.floor(Math.random()*3)
@@ -19,7 +32,6 @@ function computerChoice(){
     return compChoice;
 }
 function game(){
-    let playChoice= playerChoice();
     let compChoice= computerChoice();
     if(playChoice=="Paper" && compChoice=="Rock" || playChoice=="Rock" && compChoice=="Scissor" || playChoice=="Scissor" && compChoice=="Paper"){
         playerWin(playChoice,compChoice);
@@ -52,5 +64,5 @@ function Results(){
     return "The Round Number "+Round+ " has ended , THE Results are :  \n "+ playerColor + "\n" + computerColor + "\n The Players Score now is : "+ playerScore 
             + " And the Computer Score now is : " + computerScore;
 }
-alert("GAME ENDED");
+
 

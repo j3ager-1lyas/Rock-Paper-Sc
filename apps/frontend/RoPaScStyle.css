@@ -194,6 +194,10 @@ body{
     padding:30px 15px 30px 15px;
 }
 
-
+#Start {
+    background-color: cadetblue;
+    border-radius: 30px;
+    height: 50px;
+}
 
 
