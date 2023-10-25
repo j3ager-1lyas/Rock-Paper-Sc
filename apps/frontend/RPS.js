@@ -143,7 +143,7 @@ function activePlayerAnimation(state){
         currentComputerTarget.classList.add('activeComputerChoiceTie');
     }
     disablePlayerChoice();
-    setTimeout(disablePlayerAnimation,3000);
+    setTimeout(disablePlayerAnimation,1000);
     
 }
 

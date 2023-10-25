@@ -103,7 +103,7 @@ body{
 }
 
 .activePlayerChoiceWon{
-    animation: left-to-rightWon 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+    animation: left-to-rightWon 1s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
 }
 
 @keyframes left-to-rightWon {
@@ -116,7 +116,7 @@ body{
     }
 }
 .activePlayerChoiceTie {
-    animation: left-to-rightTie 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+    animation: left-to-rightTie 1s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
 }
 
 @keyframes left-to-rightTie {
@@ -130,7 +130,7 @@ body{
 }
 
 .activePlayerChoiceLost {
-    animation: left-to-rightLost 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+    animation: left-to-rightLost 1s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
 }
 
 @keyframes left-to-rightLost {
@@ -171,7 +171,7 @@ body{
 }
 
 .activeComputerChoiceWon{
-    animation: right-to-leftWon 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+    animation: right-to-leftWon 1s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
 }
 
 @keyframes right-to-leftWon {
@@ -181,12 +181,12 @@ body{
     }
     100% {
         transform: translateX(0%);
-        border: lightsteelblue;
+        
     }
 }
 
 .activeComputerChoiceTie{
-    animation: right-to-leftTie 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+    animation: right-to-leftTie 1s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
 }
 
 @keyframes right-to-leftTie {
@@ -196,12 +196,12 @@ body{
     }
     100% {
         transform: translateX(0%);
-        border: lightsteelblue;
+       
     }
 }
 
 .activeComputerChoiceLost{
-    animation: right-to-leftLost 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+    animation: right-to-leftLost 1s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
 }
 
 @keyframes right-to-leftLost {
@@ -211,7 +211,7 @@ body{
     }
     100% {
         transform: translateX(0%);
-        border: lightsteelblue;
+        
     }
 }
 /*<-- ResultsContent Styling -->*/
