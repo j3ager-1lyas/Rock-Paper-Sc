@@ -92,6 +92,7 @@ body{
     justify-content: left;
     height: 80px;
     width: 80px;
+    border-radius:50%;
 }
 
 .playerChoices>div>img {
@@ -101,13 +102,41 @@ body{
     border: 2px solid lightsteelblue;
 }
 
-.activePlayerChoice {
-    animation: left-to-right 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+.activePlayerChoiceWon{
+    animation: left-to-rightWon 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
 }
 
-@keyframes left-to-right {
+@keyframes left-to-rightWon {
     50% {
         transform: translateX(250%) scale(150%);
+        border: 10px solid green;
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+.activePlayerChoiceTie {
+    animation: left-to-rightTie 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+}
+
+@keyframes left-to-rightTie {
+    50% {
+        transform: translateX(250%) scale(150%);
+        border: 10px solid gray;
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.activePlayerChoiceLost {
+    animation: left-to-rightLost 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+}
+
+@keyframes left-to-rightLost {
+    50% {
+        transform: translateX(250%) scale(150%);
+        border: 10px solid red;
     }
     100% {
         transform: translateX(0%);
@@ -130,7 +159,7 @@ body{
     justify-content: right;
     height: 80px;
     width: 80px;
-    border-radius: 15px;
+    border-radius: 50%;
     
 }
 
@@ -141,19 +170,50 @@ body{
     border: 2px solid lightsteelblue;
 }
 
-.activeComputerChoice{
-    animation: left-to-right 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+.activeComputerChoiceWon{
+    animation: right-to-leftWon 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
 }
 
-@keyframes right-to-left {
+@keyframes right-to-leftWon {
     50% {
         transform: translateX(-250%) scale(150%);
+        border: 10px solid green;
     }
     100% {
         transform: translateX(0%);
+        border: lightsteelblue;
     }
 }
 
+.activeComputerChoiceTie{
+    animation: right-to-leftTie 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+}
+
+@keyframes right-to-leftTie {
+    50% {
+        transform: translateX(-250%) scale(150%);
+        border: 10px solid gray;
+    }
+    100% {
+        transform: translateX(0%);
+        border: lightsteelblue;
+    }
+}
+
+.activeComputerChoiceLost{
+    animation: right-to-leftLost 3s linear(0 0%, 0.83 7.65%, 0.85 31.76%, 1.02 42.94%, 0.88 55.88%, 1 100%) forwards;
+}
+
+@keyframes right-to-leftLost {
+    50% {
+        transform: translateX(-250%) scale(150%);
+        border: 10px solid red;
+    }
+    100% {
+        transform: translateX(0%);
+        border: lightsteelblue;
+    }
+}
 /*<-- ResultsContent Styling -->*/
 #resultsHeader{
     display: flex;
@@ -192,6 +252,7 @@ body{
     display: flex;
     align-items: center;
     padding:30px 15px 30px 15px;
+    text-align: center;
 }
 
 #Start {
