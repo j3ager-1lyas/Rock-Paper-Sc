@@ -1,52 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="apps/frontend/RoPaScStyle.css">
+    <link rel="stylesheet" href="apps/frontend/RoPaScStyle.css" />
     <script src="apps/frontend/RPS.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Header Of The Page -->
     <div id="header">
-        <h1>Welcome To Human Versus Computer</h1>
+      <h1>Welcome To Human Versus Computer</h1>
     </div>
+    <!-- The Game Content -->
     <div id="content">
-        <div class="playerContent">
-            <div class="playerName">PlayersName</div>
-            <div class="playerChoices" >
-                <div id="Rock  "><img src="apps/frontend/images/Rock.png" alt="playersRock"></div>
-                <div id="  Paper"><img src="apps/frontend/images/Paper.png" alt="playersPaper"></div>
-                <div id="Scissor  "><img src="apps/frontend/images/Scissor.png" alt="playersScissor"></div>
-            </div>
+        <!-- Players Info & Choices Section -->
+      <div class="playerContent">
+        <div class="playerName">PlayersName</div>
+        <div class="playerChoices">
+                <!-- Rock -->
+          <div id="Rock  ">
+            <img src="apps/frontend/images/Rock.png" alt="playersRock" />
+          </div>
+                <!-- Paper -->
+          <div id="  Paper">
+            <img src="apps/frontend/images/Paper.png" alt="playersPaper" />
+          </div>
+                <!-- Scissor -->
+          <div id="Scissor  ">
+            <img src="apps/frontend/images/Scissor.png" alt="playersScissor" />
+          </div>
         </div>
-        <div class="resultsContent">
-            <div id="resultsHeader">
-                <div id="round">Round Number: </div>
-                <div id="roundNumber">X/5</div>
-            </div>
-            <div id="resultsContent2">
-                <div class="playersScores">
-                    <div id="playerScoreHeader">Player's Score</div>
-                    <div id="playerScore">Score</div>
-                </div>
-                <div class="playersScores">
-                    <div id="computerScoreHeader"> Computer's Score</div>
-                    <div id="computerScore"> Score </div>
-                </div>
-            </div>
-            <div id="resultsComments"> <p>The Fate of Humanity is in Your Hands.</p></div>
-            <button id="Start">Start The Game</button>
+      </div>
+        <!-- Board of Results and Game Infos -->
+      <div class="resultsContent">
+        <div id="resultsHeader">
+          <div id="round">Round Number:</div>
+          <div id="roundNumber">X/5</div>
         </div>
-        <div class="computerContent">
-            <div class="computerName">X-AI</div>
-            <div class="computerChoices" >
-                <div id="computerRock"><img src="apps/frontend/images/Rock.png" alt="computersRock"></div>
-                <div id="computerPaper"><img src="apps/frontend/images/Paper.png" alt="computersPaper"></div>
-                <div id="computerScissor"><img src="apps/frontend/images/Scissor.png" alt="computersScissor"></div>
-            </div>
+        <div id="resultsContent2">
+          <div class="playersScores">
+            <div id="playerScoreHeader">Player's Score</div>
+            <div id="playerScore">Score</div>
+          </div>
+          <div class="playersScores">
+            <div id="computerScoreHeader">Computer's Score</div>
+            <div id="computerScore">Score</div>
+          </div>
         </div>
+        <div id="resultsComments">
+          <p>The Fate of Humanity is in Your Hands.</p>
+        </div>
+        <button id="Start">Start The Game</button>
+      </div>
+        <!-- Computers  Choices Section -->
+      <div class="computerContent">
+        <div class="computerName">X-AI</div>
+        <div class="computerChoices">
+                <!-- Rock -->
+          <div id="computerRock">
+            <img src="apps/frontend/images/Rock.png" alt="computersRock" />
+          </div>
+                <!-- Paper -->
+          <div id="computerPaper">
+            <img src="apps/frontend/images/Paper.png" alt="computersPaper" />
+          </div>
+                <!-- Scissor -->
+          <div id="computerScissor">
+            <img
+              src="apps/frontend/images/Scissor.png"
+              alt="computersScissor"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="" id="footer"> <p>CopyRight @ Odin Projects/Ilyas</p> </div>
-</body>
+    <!-- Footer -->
+    <div id="footer"><p>CopyRight @ Odin Projects/Ilyas</p></div>
+  </body>
 </html>
