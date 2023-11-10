@@ -35,7 +35,7 @@ function initialize() {
     playerNameText.textContent = 'PlayersName';
     computerScoreText.textContent = 'Score';
     playerScoreText.textContent = 'Score';
-    roundText.textContent = `X / 5`;
+    commentText.textContent='Are You now Able to Save Humanity?'
 
 }
 
@@ -120,20 +120,20 @@ function playRound() {
 /* Actions to Take When Computer Wins */
 function computerWin(PLAYER, COMPUTER) {
     computerScore++;
-    playerColor = "The Player Lost he sadly chose: " + PLAYER;
+    playerColor = "You chose: " + PLAYER;
     computerColor = "The Computer Won he  perfectly chose: " + COMPUTER;
     activePlayerAnimation('Lost');
 }
 /* Actions to Take When Player Wins */
 function playerWin(PLAYER, COMPUTER) {
     playerScore++;
-    playerColor = "The Player Won he perfectly chose: " + PLAYER;
-    computerColor = "The Computer Lost he  sadly chose: " + COMPUTER;
+    playerColor = "You Won you perfectly chose: " + PLAYER;
+    computerColor = "The Computer chose: " + COMPUTER;
     activePlayerAnimation('Won');
 }
 /* Actions to Take When They Tie */
 function Tie(PLAYER, COMPUTER) {
-    playerColor = "The Player did Tie he chose: " + PLAYER;
+    playerColor = "The Player chose: " + PLAYER;
     computerColor = " So did The Computer by chosing: " + COMPUTER;
     activePlayerAnimation('Tie');
 }
@@ -144,8 +144,22 @@ function Results() {
     Round++;
     roundText.textContent = `${Round} / 5`;
     checkRound();/**CHECK FOR THE CURRENT ROUND first */
-    return "The Round Number " + Round + " has ended , THE Results are :  \n " + playerColor + "\n" + computerColor + "\n The Players Score now is : " + playerScore
-        + " And the Computer Score now is : " + computerScore;
+    if(Round == 5){
+        if(playerScore>computerScore){
+            return "The Round Number " + Round + " has ended \n " + playerColor + "\n" + computerColor 
+            + "\n" + 'You Won The Game with  ' + playerScore + ' To ' + computerScore ;
+        }
+        else if (computerScore>playerScore){
+            return "The Round Number " + Round + " has ended \n " + playerColor + "\n" + computerColor 
+            + "\n" + 'You Lost The Game with  ' + playerScore + ' To ' + computerScore ;
+        }
+        else{
+            return "The Round Number " + Round + " has ended \n " + playerColor + "\n" + computerColor 
+            + "\n" + 'You and Computer had a Tie ' + playerScore + ' To ' + computerScore ;
+        }
+        
+    }
+    return "The Round Number " + Round + " has ended \n " + playerColor + "\n" + computerColor ;
 }
 
 
